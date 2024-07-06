@@ -15,6 +15,7 @@
         "workflow": "managed"
       },
       "development": {
+        "simulator": true,
         "workflow": "managed",
         "buildType": "development-client",
         "distribution": "internal"
