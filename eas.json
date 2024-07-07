@@ -1,24 +1,40 @@
 {
-  "builds": {
-    "android": {
-      "release": {
-        "workflow": "managed"
-      },
-      "development": {
-        "workflow": "managed",
-        "buildType": "development-client",
-        "distribution": "internal"
+  "cli": {
+    "version": "10.1.1",
+    "appVersionSource": "remote",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "development": {
+      "node": "18.20.3",
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
       }
     },
-    "ios": {
-      "release": {
-        "workflow": "managed"
+    "preview": {
+      "node": "18.20.3",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "node": "18.20.3",
+      "ios": {},
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "../path/to/api-xxx-yyy-zzz.json",
+        "track": "internal"
       },
-      "development": {
-        "simulator": true,
-        "workflow": "managed",
-        "buildType": "development-client",
-        "distribution": "internal"
+      "ios": {
+        "appleId": "seanconrad123@gmail.com",
+        "ascAppId": "6517350241",
+        "appleTeamId": "V2EVN8P5UB"
       }
     }
   }

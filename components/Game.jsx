@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Text, View, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
-import BannerAds from './BannerAds'
+// import BannerAds from './BannerAds'
 import { DeviceMotion } from 'expo-sensors';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { terms } from '../data/skate-up-terms.json';
@@ -215,6 +215,7 @@ export default function Game() {
         null
       )
       }
+      <BannerAds />
     </View >
   );
 }
